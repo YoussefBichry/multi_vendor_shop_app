@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:multi_vendor_shop_app/widgets/app_bar.dart';
 import 'package:multi_vendor_shop_app/widgets/brand_highlights.dart';
 import 'package:multi_vendor_shop_app/widgets/category_widget.dart';
 
@@ -14,20 +15,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue.shade900,
       //I want to reduce this app bar height
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(40),
-        child: AppBar(
-          backgroundColor: Colors.blue.shade900,
-          elevation: 0,
-          centerTitle: true,
-          title: const Text('Smile Shop',style: TextStyle(letterSpacing: 2),),
-          actions: [
-            IconButton(
-              icon: const Icon(IconlyLight.buy), onPressed: () {  },
-            )
-          ],
-        ),
-      ),
+      appBar: appBarWidget(context),
       //List view is used to scroll the screen with group of widgets
       body: ListView(
         children: const [

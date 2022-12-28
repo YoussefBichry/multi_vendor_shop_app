@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
         OnBoardingScreen.id:(context)=>const OnBoardingScreen(),
         MainScreen.id:(context)=>const MainScreen()
 
-
       },
     );
   }
