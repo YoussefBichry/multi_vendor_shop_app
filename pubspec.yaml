@@ -14,13 +14,15 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-
+  youtube_player_flutter: ^8.1.2
+  cached_network_image: ^3.2.3
+  getwidget: ^3.0.1
+  cloud_firestore: ^4.3.0
   cupertino_icons: ^1.0.2
   dots_indicator: ^2.1.0
   get_storage: ^2.0.3
   flutter_iconly: ^1.0.2
-
+  firebase_core: ^2.4.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -43,15 +45,15 @@ flutter:
 
 
 
- # fonts:
-  #  - family: Lato
-   #   fonts:
-    #    - asset: assets/fonts/Lato-Regular.ttf
-     #   - asset: assets/fonts/Lato-Bold.ttf
-      #    weight: 700
-   # - family: Anton
-    #  fonts:
-     #   - asset: assests/fonts/Anto-Regular.ttf
+  fonts:
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato-Regular.ttf
+        - asset: assets/fonts/Lato-Bold.ttf
+          weight: 700
+    - family: Anton
+      fonts:
+        - asset: assets/fonts/Anton-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
 
