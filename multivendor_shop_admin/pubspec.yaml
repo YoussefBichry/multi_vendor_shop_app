@@ -20,6 +20,11 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_easyloading: ^3.0.5
+  file_picker: ^5.2.4
+  firebase_storage: ^11.0.10
+  cloud_firestore: ^4.3.1
+  firebase_core: ^2.4.1
   date_time_format: ^2.0.1
   flutter_admin_scaffold: ^1.1.2
   cupertino_icons: ^1.0.2
