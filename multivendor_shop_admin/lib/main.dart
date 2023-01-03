@@ -1,7 +1,5 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_scaffold/admin_scaffold.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:multivendor_shop_admin/screens/category_screens.dart';
 import 'package:multivendor_shop_admin/screens/dashboard_screen.dart';
@@ -9,10 +7,7 @@ import 'package:date_time_format/date_time_format.dart';
 import 'package:multivendor_shop_admin/screens/main_category.dart';
 import 'package:multivendor_shop_admin/screens/sub_category_screen.dart';
 
-
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
   runApp(const MyApp());
 }
 
@@ -30,7 +25,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       home: const SideMenu(),
-      builder: EasyLoading.init(),
     );
   }
 }
@@ -144,7 +138,6 @@ class _SideMenuState extends State<SideMenu> {
       body: SingleChildScrollView(
         child: _selectedScreen,
       ),
-
     );
   }
 }
