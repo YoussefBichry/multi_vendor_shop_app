@@ -8,11 +8,12 @@ class FirebaseService{
 
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   late CollectionReference categories = firestore.collection('categories');
+  late CollectionReference mainCat = firestore.collection('mainCategories');
   final storage = FirebaseStorage.instance;
 
-  Future<void> saveCategory(Map<String,dynamic> data)async {
+  Future<void> saveCategory({CollectionReference? reference,Map<String,dynamic>? data,String? docName})async {
 
-    categories.doc(data['catName']).set(data);
+    return reference!.doc(docName).set(data);
   }
 
 }

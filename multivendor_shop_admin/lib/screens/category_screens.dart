@@ -3,6 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:multivendor_shop_admin/firebaseServices.dart';
+import 'package:multivendor_shop_admin/widgets/category_list_widget.dart';
 
 class CategoryScreen extends StatefulWidget {
   static const String id = 'category';
@@ -13,11 +14,13 @@ class CategoryScreen extends StatefulWidget {
 }
 
 class _CategoryScreenState extends State<CategoryScreen> {
+
   FirebaseService _service = FirebaseService();
   final _key = GlobalKey<FormState>();
   dynamic image;
   String? fileName;
   final TextEditingController _catName = TextEditingController();
+
   pickImage() async{
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.image,allowMultiple: false
@@ -40,11 +43,13 @@ class _CategoryScreenState extends State<CategoryScreen> {
       await ref.getDownloadURL().then((value){
         if(value.isNotEmpty){
           _service.saveCategory(
-            {
+            data: {
               'CatName':_catName.text,
               'image':value,
               'active':true
-            }
+            },
+            reference: _service.categories,
+            docName: _catName.text
           ).then((value){
             clear();
             EasyLoading.dismiss();
@@ -161,6 +166,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
               ),
             ),
           ),
+          const SizedBox(height: 10,),
+          const CategoryListWidget(),
         ],
       ),
     );
