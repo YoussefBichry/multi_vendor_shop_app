@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
         SplashScreen.id:(context)=>const SplashScreen(),
         OnBoardingScreen.id:(context)=>const OnBoardingScreen(),
         MainScreen.id:(context)=>const MainScreen()
-
       },
     );
   }

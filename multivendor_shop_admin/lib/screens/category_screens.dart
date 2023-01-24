@@ -167,7 +167,9 @@ class _CategoryScreenState extends State<CategoryScreen> {
             ),
           ),
           const SizedBox(height: 10,),
-          const CategoryListWidget(),
+           CategoryListWidget(
+            reference: _service.categories,
+          ),
         ],
       ),
     );

@@ -13,6 +13,7 @@ class MainCategoryListWidget extends StatefulWidget {
 }
 
 class _MainCategoryListWidgetState extends State<MainCategoryListWidget> {
+
   FirebaseService _service = FirebaseService();
   Object? _selectedValue;
   final TextEditingController _mainCat = TextEditingController();
@@ -76,7 +77,7 @@ class _MainCategoryListWidgetState extends State<MainCategoryListWidget> {
         Row(
           children: [
             _dropDownButton(),
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
             ElevatedButton(onPressed:(){
               setState(() {
                 _selectedValue = null;

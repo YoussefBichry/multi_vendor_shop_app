@@ -84,7 +84,7 @@ class _BrandHighlightsState extends State<BrandHighlights> {
                                   controller: YoutubePlayerController(
                                     initialVideoId: brandAdsImages[index]['youtube'],
                                     flags: const YoutubePlayerFlags(
-                                      autoPlay: true,
+                                      autoPlay: false,
                                       mute: true,
                                     ),
                                   ),

@@ -8,6 +8,7 @@ import 'package:multivendor_shop_admin/screens/dashboard_screen.dart';
 import 'package:date_time_format/date_time_format.dart';
 import 'package:multivendor_shop_admin/screens/main_category.dart';
 import 'package:multivendor_shop_admin/screens/sub_category_screen.dart';
+import 'package:multivendor_shop_admin/screens/vendors_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +26,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Multivendor Shop Admin',
       theme: ThemeData(
-
         primarySwatch: Colors.indigo,
       ),
       home: const SideMenu(),
@@ -68,9 +68,13 @@ class _SideMenuState extends State<SideMenu> {
              _selectedScreen = const SubCategoryScreen();
            });
            break;
+         case VendorScreen.id:
+           setState(() {
+             _selectedScreen = const VendorScreen();
+           });
+           break;
      }
    }
-
 
 
   @override
@@ -104,6 +108,11 @@ class _SideMenuState extends State<SideMenu> {
                 route: SubCategoryScreen.id,
               ),
             ],
+          ),
+          AdminMenuItem(
+            title: 'Vendors',
+            route: VendorScreen.id,
+            icon: Icons.group,
           ),
         ],
         selectedRoute: SideMenu.id,

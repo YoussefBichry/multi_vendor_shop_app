@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:multi_vendor_shop_app/widgets/app_bar.dart';
 import 'package:multi_vendor_shop_app/widgets/brand_highlights.dart';
-import 'package:multi_vendor_shop_app/widgets/category_widget.dart';
+import 'package:multi_vendor_shop_app/widgets/category/category_widget.dart';
 
 import '../widgets/banner_widget.dart';
 
